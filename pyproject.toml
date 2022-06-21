@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ug_hr_testing"
+version = "0.1.0"
+description = "UGlabs technical role testing"
+authors = ["Omer Lerinman <omer.ler@uglabs.io>"]
+license = "open"
+
+[tool.poetry.dependencies]
+python = "3.9.13"
+pathlib = "^1.0.1"
+regex = "^2022.6.2"
+python-abc = "^0.1.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
