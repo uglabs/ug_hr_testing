@@ -6,7 +6,6 @@ from attrdict import AttrDict
 import pandas as pd
 from abc import ABCMeta, abstractmethod
 import logging
-from wave import Wave_read
 _log = logging.getLogger(__name__)
 
 class Validator(ABC):
@@ -17,7 +16,7 @@ class Validator(ABC):
     def __init__(self):
         self._processed_input = None
 
-    def validate(self, text: str, wav: Wave_read = None, **kwargs) -> bool:
+    def validate(self, text: str, **kwargs) -> bool:
         """
         Given the input user, as a single string contains one or more words,
         retrieve boolean indication if the sentence meets the validators logic.
@@ -26,9 +25,6 @@ class Validator(ABC):
         ----------
         text : str
             The last child's voice transcription
-        wav : Wave_read, optional
-            The raw record of the child
-
         Returns
         -------
         bool
